@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		42F74AD81A489D2E005D561D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74AD71A489D2E005D561D /* main.m */; };
+		42F74ADB1A489D2E005D561D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74ADA1A489D2E005D561D /* AppDelegate.m */; };
+		42F74ADE1A489D2E005D561D /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74ADD1A489D2E005D561D /* GameScene.m */; };
+		42F74AE01A489D2E005D561D /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 42F74ADF1A489D2E005D561D /* GameScene.sks */; };
+		42F74AE31A489D2E005D561D /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74AE21A489D2E005D561D /* GameViewController.m */; };
+		42F74AE61A489D2E005D561D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42F74AE41A489D2E005D561D /* Main.storyboard */; };
+		42F74AE81A489D2E005D561D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F74AE71A489D2E005D561D /* Images.xcassets */; };
+		42F74AEB1A489D2E005D561D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F74AE91A489D2E005D561D /* LaunchScreen.xib */; };
+		42F74AF71A489D2E005D561D /* TurretTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74AF61A489D2E005D561D /* TurretTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		42F74AF11A489D2E005D561D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42F74ACA1A489D2E005D561D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42F74AD11A489D2E005D561D;
+			remoteInfo = Turret;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		42F74AD21A489D2E005D561D /* Turret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Turret.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F74AD61A489D2E005D561D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F74AD71A489D2E005D561D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		42F74AD91A489D2E005D561D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		42F74ADA1A489D2E005D561D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		42F74ADC1A489D2E005D561D /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		42F74ADD1A489D2E005D561D /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		42F74ADF1A489D2E005D561D /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		42F74AE11A489D2E005D561D /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		42F74AE21A489D2E005D561D /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		42F74AE51A489D2E005D561D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		42F74AE71A489D2E005D561D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		42F74AEA1A489D2E005D561D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		42F74AF01A489D2E005D561D /* TurretTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurretTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42F74AF51A489D2E005D561D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F74AF61A489D2E005D561D /* TurretTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TurretTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		42F74ACF1A489D2E005D561D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42F74AED1A489D2E005D561D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		42F74AC91A489D2E005D561D = {
+			isa = PBXGroup;
+			children = (
+				42F74AD41A489D2E005D561D /* Turret */,
+				42F74AF31A489D2E005D561D /* TurretTests */,
+				42F74AD31A489D2E005D561D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		42F74AD31A489D2E005D561D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42F74AD21A489D2E005D561D /* Turret.app */,
+				42F74AF01A489D2E005D561D /* TurretTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42F74AD41A489D2E005D561D /* Turret */ = {
+			isa = PBXGroup;
+			children = (
+				42F74AD91A489D2E005D561D /* AppDelegate.h */,
+				42F74ADA1A489D2E005D561D /* AppDelegate.m */,
+				42F74ADC1A489D2E005D561D /* GameScene.h */,
+				42F74ADD1A489D2E005D561D /* GameScene.m */,
+				42F74ADF1A489D2E005D561D /* GameScene.sks */,
+				42F74AE11A489D2E005D561D /* GameViewController.h */,
+				42F74AE21A489D2E005D561D /* GameViewController.m */,
+				42F74AE41A489D2E005D561D /* Main.storyboard */,
+				42F74AE71A489D2E005D561D /* Images.xcassets */,
+				42F74AE91A489D2E005D561D /* LaunchScreen.xib */,
+				42F74AD51A489D2E005D561D /* Supporting Files */,
+			);
+			path = Turret;
+			sourceTree = "<group>";
+		};
+		42F74AD51A489D2E005D561D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42F74AD61A489D2E005D561D /* Info.plist */,
+				42F74AD71A489D2E005D561D /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42F74AF31A489D2E005D561D /* TurretTests */ = {
+			isa = PBXGroup;
+			children = (
+				42F74AF61A489D2E005D561D /* TurretTests.m */,
+				42F74AF41A489D2E005D561D /* Supporting Files */,
+			);
+			path = TurretTests;
+			sourceTree = "<group>";
+		};
+		42F74AF41A489D2E005D561D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42F74AF51A489D2E005D561D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		42F74AD11A489D2E005D561D /* Turret */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42F74AFA1A489D2E005D561D /* Build configuration list for PBXNativeTarget "Turret" */;
+			buildPhases = (
+				42F74ACE1A489D2E005D561D /* Sources */,
+				42F74ACF1A489D2E005D561D /* Frameworks */,
+				42F74AD01A489D2E005D561D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Turret;
+			productName = Turret;
+			productReference = 42F74AD21A489D2E005D561D /* Turret.app */;
+			productType = "com.apple.product-type.application";
+		};
+		42F74AEF1A489D2E005D561D /* TurretTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42F74AFD1A489D2E005D561D /* Build configuration list for PBXNativeTarget "TurretTests" */;
+			buildPhases = (
+				42F74AEC1A489D2E005D561D /* Sources */,
+				42F74AED1A489D2E005D561D /* Frameworks */,
+				42F74AEE1A489D2E005D561D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42F74AF21A489D2E005D561D /* PBXTargetDependency */,
+			);
+			name = TurretTests;
+			productName = TurretTests;
+			productReference = 42F74AF01A489D2E005D561D /* TurretTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		42F74ACA1A489D2E005D561D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Kirby Gee - Stanford Univeristy";
+				TargetAttributes = {
+					42F74AD11A489D2E005D561D = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					42F74AEF1A489D2E005D561D = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 42F74AD11A489D2E005D561D;
+					};
+				};
+			};
+			buildConfigurationList = 42F74ACD1A489D2E005D561D /* Build configuration list for PBXProject "Turret" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 42F74AC91A489D2E005D561D;
+			productRefGroup = 42F74AD31A489D2E005D561D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				42F74AD11A489D2E005D561D /* Turret */,
+				42F74AEF1A489D2E005D561D /* TurretTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		42F74AD01A489D2E005D561D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F74AEB1A489D2E005D561D /* LaunchScreen.xib in Resources */,
+				42F74AE81A489D2E005D561D /* Images.xcassets in Resources */,
+				42F74AE01A489D2E005D561D /* GameScene.sks in Resources */,
+				42F74AE61A489D2E005D561D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42F74AEE1A489D2E005D561D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		42F74ACE1A489D2E005D561D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F74AE31A489D2E005D561D /* GameViewController.m in Sources */,
+				42F74ADB1A489D2E005D561D /* AppDelegate.m in Sources */,
+				42F74ADE1A489D2E005D561D /* GameScene.m in Sources */,
+				42F74AD81A489D2E005D561D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42F74AEC1A489D2E005D561D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42F74AF71A489D2E005D561D /* TurretTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		42F74AF21A489D2E005D561D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42F74AD11A489D2E005D561D /* Turret */;
+			targetProxy = 42F74AF11A489D2E005D561D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		42F74AE41A489D2E005D561D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42F74AE51A489D2E005D561D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		42F74AE91A489D2E005D561D /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				42F74AEA1A489D2E005D561D /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		42F74AF81A489D2E005D561D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		42F74AF91A489D2E005D561D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42F74AFB1A489D2E005D561D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Turret/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		42F74AFC1A489D2E005D561D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Turret/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		42F74AFE1A489D2E005D561D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TurretTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turret.app/Turret";
+			};
+			name = Debug;
+		};
+		42F74AFF1A489D2E005D561D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TurretTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turret.app/Turret";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		42F74ACD1A489D2E005D561D /* Build configuration list for PBXProject "Turret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42F74AF81A489D2E005D561D /* Debug */,
+				42F74AF91A489D2E005D561D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42F74AFA1A489D2E005D561D /* Build configuration list for PBXNativeTarget "Turret" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42F74AFB1A489D2E005D561D /* Debug */,
+				42F74AFC1A489D2E005D561D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		42F74AFD1A489D2E005D561D /* Build configuration list for PBXNativeTarget "TurretTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42F74AFE1A489D2E005D561D /* Debug */,
+				42F74AFF1A489D2E005D561D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 42F74ACA1A489D2E005D561D /* Project object */;
+}
