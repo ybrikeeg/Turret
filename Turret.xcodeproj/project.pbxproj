@@ -16,6 +16,9 @@
 		42F74AE81A489D2E005D561D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F74AE71A489D2E005D561D /* Images.xcassets */; };
 		42F74AEB1A489D2E005D561D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42F74AE91A489D2E005D561D /* LaunchScreen.xib */; };
 		42F74AF71A489D2E005D561D /* TurretTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74AF61A489D2E005D561D /* TurretTests.m */; };
+		42F74B021A489D58005D561D /* Turret.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74B011A489D58005D561D /* Turret.m */; };
+		42F74B051A48B2DB005D561D /* Target.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74B041A48B2DB005D561D /* Target.m */; };
+		42F74B081A48B5D1005D561D /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F74B071A48B5D1005D561D /* Bullet.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,13 @@
 		42F74AF01A489D2E005D561D /* TurretTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TurretTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F74AF51A489D2E005D561D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42F74AF61A489D2E005D561D /* TurretTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TurretTests.m; sourceTree = "<group>"; };
+		42F74B001A489D58005D561D /* Turret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turret.h; sourceTree = "<group>"; };
+		42F74B011A489D58005D561D /* Turret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Turret.m; sourceTree = "<group>"; };
+		42F74B031A48B2DB005D561D /* Target.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Target.h; sourceTree = "<group>"; };
+		42F74B041A48B2DB005D561D /* Target.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Target.m; sourceTree = "<group>"; };
+		42F74B061A48B5D1005D561D /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		42F74B071A48B5D1005D561D /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		42F74B091A48B6A9005D561D /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +96,15 @@
 		42F74AD41A489D2E005D561D /* Turret */ = {
 			isa = PBXGroup;
 			children = (
-				42F74AD91A489D2E005D561D /* AppDelegate.h */,
-				42F74ADA1A489D2E005D561D /* AppDelegate.m */,
+				42F74B091A48B6A9005D561D /* constants.h */,
 				42F74ADC1A489D2E005D561D /* GameScene.h */,
 				42F74ADD1A489D2E005D561D /* GameScene.m */,
+				42F74B031A48B2DB005D561D /* Target.h */,
+				42F74B041A48B2DB005D561D /* Target.m */,
+				42F74B001A489D58005D561D /* Turret.h */,
+				42F74B011A489D58005D561D /* Turret.m */,
+				42F74B061A48B5D1005D561D /* Bullet.h */,
+				42F74B071A48B5D1005D561D /* Bullet.m */,
 				42F74ADF1A489D2E005D561D /* GameScene.sks */,
 				42F74AE11A489D2E005D561D /* GameViewController.h */,
 				42F74AE21A489D2E005D561D /* GameViewController.m */,
@@ -104,6 +119,8 @@
 		42F74AD51A489D2E005D561D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				42F74AD91A489D2E005D561D /* AppDelegate.h */,
+				42F74ADA1A489D2E005D561D /* AppDelegate.m */,
 				42F74AD61A489D2E005D561D /* Info.plist */,
 				42F74AD71A489D2E005D561D /* main.m */,
 			);
@@ -228,7 +245,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F74B021A489D58005D561D /* Turret.m in Sources */,
+				42F74B081A48B5D1005D561D /* Bullet.m in Sources */,
 				42F74AE31A489D2E005D561D /* GameViewController.m in Sources */,
+				42F74B051A48B2DB005D561D /* Target.m in Sources */,
 				42F74ADB1A489D2E005D561D /* AppDelegate.m in Sources */,
 				42F74ADE1A489D2E005D561D /* GameScene.m in Sources */,
 				42F74AD81A489D2E005D561D /* main.m in Sources */,
