@@ -18,11 +18,11 @@
 {
    self = [super init];
    if(self) {
-      SKSpriteNode *ring = [SKSpriteNode spriteNodeWithImageNamed:@"turretRing"];
+      SKSpriteNode *ring = [SKSpriteNode spriteNodeWithImageNamed:@"ring"];
       [self addChild:ring];
       
       self.pipe = [SKSpriteNode spriteNodeWithImageNamed:@"pipe"];
-      self.pipe.position = CGPointMake(0, ring.frame.size.height/2);
+      self.pipe.position = CGPointMake(0, self.pipe.frame.size.height/2);
       [self addChild:self.pipe];
       
    }
