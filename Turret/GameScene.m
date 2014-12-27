@@ -66,7 +66,7 @@
 
          float lockedAngle = [self getAngleFromTurretToPoint:locked.position angleOfTurret:angle];
          //NSLog(@"Theta: %f",SK_RADIANS_TO_DEGREES(theta));
-         NSLog(@"LockedAngle: %f",SK_RADIANS_TO_DEGREES(lockedAngle));
+         //NSLog(@"LockedAngle: %f",SK_RADIANS_TO_DEGREES(lockedAngle));
          
          if (fabs(lockedAngle) <= HEAT_SINK_ROTATION_LIMIT){
             
