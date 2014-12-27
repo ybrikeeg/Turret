@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #include "constants.h"
+#import "Target.h"
 
 typedef enum {
    kBulletNormal,
@@ -24,5 +25,6 @@ typedef enum {
 - (int)getBulletHeight;
 - (void)explode;
 - (void)fireWithFrame:(CGRect)frame turretPosition:(CGPoint)turretPosition;
+- (void)fireWithFrame:(CGRect)frame turretPosition:(CGPoint)turretPosition withAction:(SKAction *)action;
 
 @end

@@ -40,14 +40,15 @@
 {
    Target *target = [[Target alloc] init];
    [self addChild:target];
-   
+   NSLog(@"Frame: %@", NSStringFromCGRect(self.view.frame));
    [target runActionWithinFrame:self.frame];
+   
 }
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
    /* Called when a touch begins */
-   
+
    //do nothing if turret is in process of firing
    if ([self.turret hasActions]) return;
    
@@ -55,37 +56,85 @@
       CGPoint positionInScene = [touch locationInNode:self];
       
       Target *locked = [self calculateLockedTarget: positionInScene];
-
+      
       float deltaX = positionInScene.x - self.turret.position.x;
       float deltaY = positionInScene.y - self.turret.position.y;
       float angle = atan2(deltaY, deltaX);
       float time = fabsf(angle - (self.turret.zRotation + M_PI_2)) * (TURRET_ROTATE_SPEED / (M_PI * 2));
       SKAction *rotation = [SKAction rotateToAngle:angle - SK_DEGREES_TO_RADIANS(90.0f) duration:time shortestUnitArc:YES];
       [self.turret runAction: rotation completion:^{
+
+         float lockedAngle = [self getAngleFromTurretToPoint:locked.position angleOfTurret:angle];
+         //NSLog(@"Theta: %f",SK_RADIANS_TO_DEGREES(theta));
+         NSLog(@"LockedAngle: %f",SK_RADIANS_TO_DEGREES(lockedAngle));
          
-         
-         //check if locked is within heat sink rotation range
-         NSLog(@"Rotation of turret: %f", SK_RADIANS_TO_DEGREES(angle));
-         
-         //calculate position at end of turret
-         float pipeLength = PIPE_HEIGHT - ((BULLET_RECTANGLE_HEIGHT + BULLET_DIAMETER/2)/2);
-         float x = cos(angle) * pipeLength;
-         float y = sin(angle) * pipeLength;
-         CGPoint tipOfPipe = CGPointMake(self.turret.position.x + x, self.turret.position.y + y);
-         
-         float theta = M_PI_2 - atanf((locked.position.y - tipOfPipe.y) / fabs(locked.position.x - tipOfPipe.x));
-         NSLog(@"Theta: %f",SK_RADIANS_TO_DEGREES(theta));
-         if (theta <= HEAT_SINK_ROTATION_LIMIT){
+         if (fabs(lockedAngle) <= HEAT_SINK_ROTATION_LIMIT){
+            
             //fire bullet
             Bullet *bullet = [[Bullet alloc] initWithAngle:angle withBulletType:kBulletHeatSeek];
             [self addChild:bullet];
-            [bullet fireWithFrame:self.frame turretPosition:self.turret.position];
-            
+            [bullet fireWithFrame:self.frame turretPosition:self.turret.position withAction:[self calculateLockedTargetPath: locked turretRotationAngle:angle touchPoint: positionInScene]];
+
             [self.turret animatePipe];
          }
       }];
       
    }
+}
+
+- (float)getAngleFromTurretToPoint:(CGPoint)pt angleOfTurret:(float)angle
+{
+   float pipeLength = PIPE_HEIGHT;
+   float x = cos(angle) * pipeLength;
+   float y = sin(angle) * pipeLength;
+   CGPoint tipOfPipe = CGPointMake(self.turret.position.x + x, self.turret.position.y + y);
+   
+   float theta = M_PI_2 - atanf((pt.y - tipOfPipe.y) / fabs(pt.x - tipOfPipe.x));
+   float lockedAngle = angle - (M_PI_2 - theta);
+   if (angle > M_PI_2) lockedAngle = M_PI - angle - (M_PI_2 - theta);
+   
+   return lockedAngle;
+}
+
+- (SKAction *)calculateLockedTargetPath:(Target *)locked turretRotationAngle:(float)angle touchPoint:(CGPoint)touchPoint
+{
+   CGPoint nextPoint = CGPointZero;
+   float targetTime = 0;
+   float bulletTime = FLT_MAX;
+   do {
+      nextPoint = [locked step];
+      
+      //get time target takes to travel to next point
+      targetTime = [self distance:nextPoint from:locked.position] / locked.pointsPerSecond;
+      bulletTime = [self distance:nextPoint from:self.turret.position] / BULLET_SPEED;
+      
+      if (bulletTime < targetTime){
+         CGPoint anchor = CGPointMake((touchPoint.x - self.turret.position.x)/2 + self.turret.position.x, (touchPoint.y - self.turret.position.y)/2 + self.turret.position.y);
+         SKShapeNode *n = [SKShapeNode shapeNodeWithCircleOfRadius:3.0f];
+         n.position = nextPoint;
+         n.fillColor = [SKColor greenColor];
+         [self addChild:n];
+         
+         SKShapeNode *n1 = [SKShapeNode shapeNodeWithCircleOfRadius:3.0f];
+         n1.position = anchor;
+         n1.fillColor = [SKColor yellowColor];
+         [self addChild:n1];
+         //calculate bezier path
+         UIBezierPath *path = [UIBezierPath bezierPath];
+         [path moveToPoint:self.turret.position];
+         [path addQuadCurveToPoint:nextPoint controlPoint: anchor];
+         
+         SKShapeNode *pp = [SKShapeNode shapeNodeWithPath:path.CGPath];
+         pp.fillColor = [SKColor clearColor];
+         pp.strokeColor = [SKColor yellowColor];
+         [self addChild:pp];
+         
+         SKAction *followline = [SKAction followPath:path.CGPath asOffset:NO orientToPath:YES duration:bulletTime];
+         return followline;
+      }
+   } while (bulletTime > targetTime);
+   
+   return NULL;//this should never be called....hopefully
 }
 
 - (float)distance:(CGPoint)p1 from:(CGPoint)p2
@@ -105,7 +154,6 @@
             closestDistance = currDist;
             locked = (Target *)node;
          }
-         NSLog(@"Dist: %f", currDist);
       }
    }
    SKAction *a = [SKAction scaleTo:1.3f duration:0.2f];
@@ -117,16 +165,15 @@
 }
 -(void)update:(CFTimeInterval)currentTime {
    /* Called before each frame is rendered */
+
 }
 
 - (void)removeTarget:(Target *)target fromBullet:(Bullet *)bullet
 {
    if (bullet.type == kBulletExplosion){
-      NSLog(@"DUDE");
       [bullet explode];
    }
    [target removeFromParent];
-   NSLog(@"boom");
 }
 
 /*

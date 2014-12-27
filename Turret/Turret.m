@@ -26,13 +26,13 @@
       self.pipe.position = CGPointMake(0, self.pipe.frame.size.height/2);
       [self addChild:self.pipe];
       
-      SKShapeNode *leftZone = [SKShapeNode shapeNodeWithRect:CGRectMake(0, 0, GUIDE_WIDTH, 300)];
+      SKShapeNode *leftZone = [SKShapeNode shapeNodeWithRect:CGRectMake(0, 0, GUIDE_WIDTH, 800)];
       leftZone.fillColor = [SKColor greenColor];
       leftZone.position = CGPointMake(self.pipe.position.x - GUIDE_WIDTH/2, self.pipe.position.y + self.pipe.frame.size.height/2);
       leftZone.zRotation = HEAT_SINK_ROTATION_LIMIT;
       [self addChild:leftZone];
       
-      SKShapeNode *rightZone = [SKShapeNode shapeNodeWithRect:CGRectMake(0, 0, GUIDE_WIDTH, 300)];
+      SKShapeNode *rightZone = [SKShapeNode shapeNodeWithRect:CGRectMake(0, 0, GUIDE_WIDTH, 800)];
       rightZone.fillColor = [SKColor greenColor];
       rightZone.position = CGPointMake(self.pipe.position.x - GUIDE_WIDTH/2, self.pipe.position.y + self.pipe.frame.size.height/2);
       rightZone.zRotation = -HEAT_SINK_ROTATION_LIMIT;

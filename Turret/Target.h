@@ -11,6 +11,8 @@
 
 @interface Target : SKSpriteNode
 
-
+@property (nonatomic) int pointsPerSecond;
 - (void)runActionWithinFrame:(CGRect)frame;
+- (CGPoint)step;
+
 @end

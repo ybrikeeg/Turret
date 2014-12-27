@@ -49,6 +49,22 @@
    return self;
 }
 
+- (void)fireWithFrame:(CGRect)frame turretPosition:(CGPoint)turretPosition withAction:(SKAction *)action
+{
+   NSLog(@"called: %@", action.description);
+   //calculate position at end of turret
+   float pipeLength = PIPE_HEIGHT - ([self getBulletHeight]/2);
+   float x = cos(self.angle) * pipeLength;
+   float y = sin(self.angle) * pipeLength;
+   self.position = CGPointMake(turretPosition.x + x, turretPosition.y + y);
+   NSLog(@"pos: %@", NSStringFromCGPoint(self.position));
+   
+   [self runAction:action completion:^{
+      [self removeFromParent];
+   }];
+}
+
+
 - (void)fireWithFrame:(CGRect)frame turretPosition:(CGPoint)turretPosition
 {
    //calculate position at end of turret
