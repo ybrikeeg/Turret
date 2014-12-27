@@ -7,10 +7,12 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "constants.h"
 
 @interface Turret : SKNode
 
 
 - (void)animatePipe;
+- (int)getPipeLength;
 
 @end

@@ -9,6 +9,20 @@
 #import <SpriteKit/SpriteKit.h>
 #include "constants.h"
 
-@interface Bullet : SKSpriteNode
+typedef enum {
+   kBulletNormal,
+   kBulletHeatSeek,
+   kBulletExplosion,
+} BulletType;
+
+@interface Bullet : SKNode
+
+@property (nonatomic) BulletType type;
+
+
+- (id)initWithAngle:(float)angle withBulletType:(BulletType)bulletType;
+- (int)getBulletHeight;
+- (void)explode;
+- (void)fireWithFrame:(CGRect)frame turretPosition:(CGPoint)turretPosition;
 
 @end

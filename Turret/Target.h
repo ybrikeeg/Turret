@@ -11,4 +11,6 @@
 
 @interface Target : SKSpriteNode
 
+
+- (void)runActionWithinFrame:(CGRect)frame;
 @end
